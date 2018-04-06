@@ -4,17 +4,13 @@
 #include <iostream>
 #include <string>
 
-#include <contact.h>
-
 class Company : public Contact
 {
     std::string company_name;
     std::string company_id;
 
 public:
-    Company();
-
-    void newContact(const std::string v_name, const std::string v_phonen, const std::string v_address, const std::string c_name, const std::string c_id);
+    Company();  
 };
 
 #endif // COMPANY_H

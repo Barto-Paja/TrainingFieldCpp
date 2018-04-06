@@ -1,30 +1,38 @@
 #include "person.h"
 
-std::vector<Person> Person::sheet;
-
-Person::Person()
-{
-
-}
-
-Person::Person(const Person &r)
-{
-    name = r.name;
-    phone_number = r.phone_number;
-    address = r.address;
-
-    first_name = r.first_name;
-    last_name = r.last_name;
-
-    index = r.index;
-}
+//std::vector<Person> Person::sheet;
 
 Person::~Person()
 {
 
 }
 
-Person &Person::operator =(const Person &k)
+void Person::review(int id)
+{
+
+}
+
+void Person::head()
+{
+
+}
+
+void Person::tail()
+{
+
+}
+
+void Person::sort_by(int column)
+{
+
+}
+
+std::string Person::myNameIs()
+{
+    return this->first_name;
+}
+
+/*Person &Person::operator =(const Person &k)
 {
     if(this==&k)
     {
@@ -126,3 +134,4 @@ bool operator <(const Person &l, const Person &r)
                std::tie(r.index,r.name,r.phone_number,r.address,r.last_name,r.first_name);
 
 }
+*/

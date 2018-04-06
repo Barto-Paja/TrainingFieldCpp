@@ -8,34 +8,27 @@
 #include <algorithm>
 #include <tuple>
 
-#include "contact.h"
+#include "contacts.h"
 
 
-class Person : public Contact
+class Person : public Contacts
 {
     std::string first_name;
     std::string last_name;
 
-    static std::vector<Person> sheet;
-
 public:
-    Person();
-    Person(const Person &r);
+    Person(): Contacts(), first_name{"F_name"},last_name{"L_Name"}{}
+    Person(int arg1,std::string arg2,std::string arg3,std::string arg4,std::string arg5, std::string arg6):
+        Contacts{arg1,arg2,arg3,arg4},first_name{arg5},last_name{arg6}{}
     ~Person();
-    Person & operator =(const Person &k);
-
-    void newContatc(const std::string v_name, const std::string v_phonen, const std::string v_address, const std::string f_name, const std::string l_name);
 
     virtual void review(int id) override;
-    virtual void head() override;
-    virtual void tail() override;
-    virtual void sort_by(int column) override;
+    virtual void head() override;    // Head + pierwsze 5 rekodów
+    virtual void tail() override;    // Head + osatnie 5 rekordów
+    virtual void sort_by(int column) override; // Sortowanie po wybranej kolumnie
 
-private:
+    std::string myNameIs();
 
-    friend bool operator <(Person const &l, Person const &r);
 };
-
-bool operator <(Person const &l, Person const &r);
 
 #endif // PERSON_H

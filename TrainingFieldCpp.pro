@@ -4,11 +4,11 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    contact.cpp \
     person.cpp \
-    company.cpp
+    company.cpp \
+    contacts.cpp
 
 HEADERS += \
-    contact.h \
     person.h \
-    company.h
+    company.h \
+    contacts.h
